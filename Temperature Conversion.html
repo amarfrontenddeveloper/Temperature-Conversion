@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Temprature</title>
+	<style type="text/css">
+		div
+		{
+			height: 400px;
+			width: 400px;
+			background: cyan;
+			border:1px solid red;
+			border-radius: 25px 0px 25px 0px;
+			margin-left: 500px;
+			margin-top: 50px;
+		}
+		#first ,#Centigrade,#Fahrenheit
+		{
+			margin-left: 50px;
+			margin-top: 20px;
+		}
+		#first,#second
+		{
+			width: 300px;
+			height: 30px;
+			border-radius: 10px 0px 10px 0px;
+			font-size: 20px;
+		}
+		label,span
+		{
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+  <div>
+  	<input type="text" name="text" id="first"> <br>
+  	<form>
+  	<input type="radio"  value="Centigrade" id="Centigrade" onclick="tem()">
+  	
+  	<label for="Centigrade">Centigrade to Fahrenheit</label> <br>
+  	
+  	<input type="radio" value="Fahrenheit" id="Fahrenheit" onclick="fan()"> 
+  	<label for="Fahrenheit">Fahrenheit to Centigrade</label> <br>
+  	</form> <br>
+  	<span> Result:</span> <input type="text" name="text" id="second">
+  </div>
+</body>
+<script type="text/javascript">
+	function tem()
+	 {
+		a=document.getElementById('first').value;
+		Centigrade=(a*9/5)+32;
+		document.getElementById("second").value=Centigrade;
+
+	}
+	function fan()
+	{
+		a=document.getElementById('first').value;
+		Fahrenheit=(a-32)*5/9;
+		document.getElementById("second").value=Fahrenheit;
+
+		
+	}
+</script>
+</html>
